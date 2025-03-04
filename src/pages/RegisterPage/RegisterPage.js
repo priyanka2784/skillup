@@ -1,5 +1,4 @@
 import React from "react";
-import elearning from "../../Assets/images/elearning.png";
 import "./styles.css";
 
 function RegisterPage() {
