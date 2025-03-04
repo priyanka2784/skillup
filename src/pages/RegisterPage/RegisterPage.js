@@ -1,10 +1,14 @@
+import React from "react";
+import elearning from "../../Assets/images/elearning.png";
 import "./styles.css";
+
 function RegisterPage() {
   return (
     <div className="registerpagebasecontainer">
-      <h1>Create Your Account</h1>
+      <h1>Skill Up🎚️</h1>
       <div className="registerpagecontentbasecontainer">
-        <h1>Registerpage</h1>
+        <h1>Create Your Account📚</h1>
+
         <div className="registerpageformbasecontainer">
           <form>
             <table>
@@ -16,7 +20,7 @@ function RegisterPage() {
                   </div>
                 </td>
                 <td>
-                  <input type="text" placeholder="Name" />
+                  <input type="text" placeholder="Name" required />
                 </td>
               </tr>
               <tr>
@@ -24,7 +28,7 @@ function RegisterPage() {
                   <div className="registerpageinputbasecontainer">E-mail:</div>
                 </td>
                 <td>
-                  <input type="email" placeholder="Email" />
+                  <input type="email" placeholder="Email" required />
                 </td>
               </tr>
               <tr>
@@ -34,7 +38,7 @@ function RegisterPage() {
                   </div>
                 </td>
                 <td>
-                  <input type="password" placeholder="Password" />
+                  <input type="password" placeholder="Password" required />
                 </td>
               </tr>
               <tr>
@@ -44,16 +48,35 @@ function RegisterPage() {
                   </div>
                 </td>
                 <td>
-                  <input type="password" placeholder="Confirm Password" />
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    required
+                  />
                 </td>
               </tr>
               <tr>
-                <div className="registerpagebuttonbasecontainer">
-                  <button type="submit">Register</button>
-                </div>
+                <td>
+                  <div>
+                    <label>select an option</label>{" "}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select>
+                    <option value="">--up-to-u--</option>
+                    <option value="Reader">Content Reader</option>
+
+                    <option value="creator">Content creator</option>
+                  </select>
+                </td>
               </tr>
             </table>
           </form>
+        </div>
+        <div className="registerpagebuttonbasecontainer">
+          <button type="submit">Register</button>
         </div>
       </div>
       <div className="registerpageimagebasecontainer"></div>
