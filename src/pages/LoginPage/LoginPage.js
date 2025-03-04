@@ -9,7 +9,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   return (
     <div className="mainbaseconatiner" style={{ height: "100vh" }}>
-      <h1 className="headingcontainer">E-LEARNING</h1>
+      <h1>E-LEARNING</h1>
       <div className="loginbasecontainer">
         <div className="ImageContainer">
           <img alt="elearning" />

@@ -1,78 +1,37 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0%;
+    margin:0%;
     box-sizing: border-box;
 }
-.headingcontainer{
+.registerpagebasecontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   background: linear-gradient(to top,var(--basecolor),var(--bordercolor),var(--basecolorsecond),var(--basecolor)); 
-}
-.loginbasecontainer{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    background: linear-gradient(to right,var(--basecolor),var(--basecolor));
-    flex-direction: row;
-}
-.usernamecontainer{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    padding:50px;
-    margin:20%;
-    background-color: var(--basecolorsecond);
-    box-shadow: 0px 0px 10px var(--basecolorsecond);
+    flex: 1;
+    gap:20px;
+    padding:5px;
+   
     border-radius: 20px;
     border:1px var(--bordercolor);
-}
-.usernamecontainer input{
-    padding:10px;
-    border-radius: 10px;
-
-}
-.buttoncontainer  button{
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5%;
-    background-color:var(--blackcolor);
-    color:var(--basecolorsecond)
-}
-button:hover{
+    height:100vh;
+    width:100%;
     background-color: var(--basecolor);
-    color:var(--bordercolor)
 }
-.ImageContainer{
-    
-    display: flex;
-    flex-direction:row; 
-    align-items: center;
-    margin:10%;
-    padding: 40px;
-    gap: 10px;
-    border-bottom: 10px;
-    background-color: var(--basecolorsecond);
-    box-shadow: 0px 0px 10px var(--basecolorsecond);
-    border: 1px var(--bordercolor);
-}
-@media(max-width:1080px){
-    .mainbaseconatiner{
-display:flex;
-flex-direction: column;
-    
-    }
-}
-@media(max-width:720px){
-    .mainbaseconatiner{
-display: flex;
-flex-direction: column;
 
-gap:10px;
-   }
+.registerpagecontentbasecontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
 }
-@media(max-width:480px){
-    .ImageContainer{
-        display: none;}
+
+.registerheading{
+    align-items: center;
+    justify-content: center;
+
 }
