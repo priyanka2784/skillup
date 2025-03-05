@@ -11,12 +11,28 @@
     flex: 1;
     gap:20px;
     padding:5px;
-   
+    position: relative;
+    background-size: cover;
+    top: 0%;
+    left:0%;
+    right:0%;
     border-radius: 20px;
     border:1px var(--bordercolor);
     height:100vh;
     width:100%;
     background-color: var(--basecolor);
+}
+.registerpagebasecontainer h1{
+    color:var(--blackcolor)
+}
+
+.registerpageimagebasecontainer {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    backdrop-filter: blur(10px);
 }
 
 .registerpagecontentbasecontainer {
@@ -28,6 +44,8 @@
     background-color: #FFF;
     box-shadow: 0px 0px 10px var(--basecolorsecond) ;
     border-radius: 20px;
+    position: absolute;
+    
 }
 
 .registerheading{

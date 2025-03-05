@@ -1,10 +1,17 @@
 import React from "react";
 import "./styles.css";
+import ASSETS from "../../Assets";
+import CustomButton from "../../COMPONENTS/CustomButton/CustomButton";
+import COLOR from "../../config/COLOR";
 
 function RegisterPage() {
   return (
-    <div className="registerpagebasecontainer">
-      <h1>Skill Up🎚️</h1>
+    <div
+      className="registerpagebasecontainer"
+      style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
+    >
+      {/* <h1>Skill Up🎚️</h1> */}
+      <div className="registerpageimagebasecontainer"></div>
       <div className="registerpagecontentbasecontainer">
         <h1>Create Your Account📚</h1>
 
@@ -68,6 +75,7 @@ function RegisterPage() {
                     <option value="Reader">Content Reader</option>
 
                     <option value="creator">Content creator</option>
+                    <option value="Both"> Both</option>
                   </select>
                 </td>
               </tr>
@@ -75,10 +83,14 @@ function RegisterPage() {
           </form>
         </div>
         <div className="registerpagebuttonbasecontainer">
-          <button type="submit">Register</button>
+          <CustomButton
+            backgroundColor={COLOR.basecolorsecond}
+            color={COLOR.blackcolor}
+            title={"register"}
+            onClick={() => alert("click done")}
+          />
         </div>
       </div>
-      <div className="registerpageimagebasecontainer"></div>
     </div>
   );
 }

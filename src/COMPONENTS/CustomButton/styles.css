@@ -1,0 +1,13 @@
+.CustomButtonBaseContainer{
+    background-color: var(--basecolor);
+    color:var(--basecolorsecond);
+    padding: 10px;
+    border-radius: 25px;
+    transition: 0.5s ease-in-out;
+}
+.CustomButtonBaseContainer:hover{
+    background-color: transparent !important;
+    color:var(--basecolorsecond )!important;
+    border: 1px solid var(--bordercolor);
+    cursor: pointer;
+}
