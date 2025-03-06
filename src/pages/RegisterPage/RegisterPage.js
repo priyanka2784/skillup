@@ -11,7 +11,7 @@ function RegisterPage() {
       style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
     >
       {/* <h1>Skill Up🎚️</h1> */}
-      <div className="registerpageimagebasecontainer"></div>
+      <div className=""></div>
       <div className="registerpagecontentbasecontainer">
         <h1>Create Your Account📚</h1>
 

@@ -7,7 +7,7 @@
 }
 .CustomButtonBaseContainer:hover{
     background-color: transparent !important;
-    color:var(--basecolorsecond )!important;
+    color:var(--blackcolor )!important;
     border: 1px solid var(--bordercolor);
     cursor: pointer;
 }
