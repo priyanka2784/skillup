@@ -1,52 +1,94 @@
-import { useState } from "react";
-import CustomInput from "../../COMPONENTS/CustomInput/CustomInput.js";
-import COLOR from "../../config/COLOR.js";
+import React from "react";
 import "./styles.css";
-import { FaUserAlt } from "react-icons/fa";
-import { FaKey } from "react-icons/fa";
+import ASSETS from "../../Assets";
+import CustomButton from "../../COMPONENTS/CustomButton/CustomButton";
+import COLOR from "../../config/COLOR";
+
 function RegisterPage() {
-  const [email, setEmail] = useState("@gmail.com");
-  const [username, setusername] = useState("enterusername");
-  const [password, setPassword] = useState("");
   return (
-    <div className="mainbaseconatiner">
-      <h1 className="headingcontainer">
-        <span style={{ color: COLOR.basecolor }}>S</span>Kill-
-        <span style={{ color: COLOR.secondarycolor }}>U</span>p
-      </h1>
-      <div className="loginbasecontainer">
-        <div className="ImageContainer">
-          <img alt="elearning" />
+    <div
+      className="registerpagebasecontainer"
+      style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
+    >
+      {/* <h1>Skill Up🎚️</h1> */}
+      <div className=""></div>
+      <div className="registerpagecontentbasecontainer">
+        <h1>Create Your Account📚</h1>
+
+        <div className="registerpageformbasecontainer">
+          <form>
+            <table>
+              <tr>
+                <td>
+                  <div className="registerpageinputbasecontainer">
+                    {" "}
+                    UserName:
+                  </div>
+                </td>
+                <td>
+                  <input type="text" placeholder="Name" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="registerpageinputbasecontainer">E-mail:</div>
+                </td>
+                <td>
+                  <input type="email" placeholder="Email" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="registerpageinputbasecontainer">
+                    Password:{" "}
+                  </div>
+                </td>
+                <td>
+                  <input type="password" placeholder="Password" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="registerpageinputbasecontainer">
+                    ConfirmPassword:
+                  </div>
+                </td>
+                <td>
+                  <input
+                    type="password"
+                    placeholder="Confirm Password"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                    <label>select an option</label>{" "}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select>
+                    <option value="">--up-to-u--</option>
+                    <option value="Reader">Content Reader</option>
+
+                    <option value="creator">Content creator</option>
+                    <option value="Both"> Both</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </form>
         </div>
-
-        <div className="textbasecontainer"></div>
-
-        <div className="usernamecontainer">
-          <h1>WELCOME</h1>
-          <h2>{`Register Here! ${email}`}</h2>
-          <CustomInput
-            type={"email"}
-            placeholder={"EnterEmail"}
-            Icon={FaUserAlt}
-            inputValue={email}
-            onChangeText={(e) => {
-              alert(e.target.value);
-              setEmail(e.target.value);
-            }}
+        <div className="registerpagebuttonbasecontainer">
+          <CustomButton
+            backgroundColor={COLOR.basecolorsecond}
+            color={COLOR.blackcolor}
+            title={"register"}
+            onClick={() => alert("click done")}
           />
-          <CustomInput
-            type="password"
-            placeholder="Enter password"
-            Icon={FaKey}
-            isSecureEntry={"true"}
-            inputValue={password}
-            onChangeText={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-          <div className="buttoncontainer">
-            <button>Register</button>
-          </div>
         </div>
       </div>
     </div>

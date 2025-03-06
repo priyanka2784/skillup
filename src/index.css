@@ -1,5 +1,6 @@
 :root{
-  --basecolor:#70AE6E;
+  --basecolor:#70ae6ec4;
+  --basecolordim:hsla(118, 28%, 56%, 0.767);
   --basecolorsecond:#FEFEFF;
   --secondarycolor:rgb(139, 134, 134);
   --blackcolor:#000000;
