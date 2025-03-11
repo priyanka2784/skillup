@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
+import { auth } from "../../firebase";
 import ASSETS from "../../Assets";
-import CustomButton from "../../COMPONENTS/CustomButton/CustomButton";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
 
 function RegisterPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegister = async () => {
+    await createUserWithEmailAndPassword(auth, email, password);
+  };
   return (
     <div
       className="registerpagebasecontainer"
@@ -34,7 +42,13 @@ function RegisterPage() {
                   <div className="registerpageinputbasecontainer">E-mail:</div>
                 </td>
                 <td>
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
                 </td>
               </tr>
               <tr>
@@ -44,7 +58,13 @@ function RegisterPage() {
                   </div>
                 </td>
                 <td>
-                  <input type="password" placeholder="Password" required />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
                 </td>
               </tr>
               <tr>
@@ -87,7 +107,7 @@ function RegisterPage() {
             backgroundColor={COLOR.basecolorsecond}
             color={COLOR.blackcolor}
             title={"register"}
-            onClick={() => alert("click done")}
+            onClick={handleRegister}
           />
         </div>
       </div>
