@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import ASSETS from "../../Assets";
-import CustomButton from "../../COMPONENTS/CustomButton/CustomButton";
+import ASSETS from "../../assets";
+import CustomButton from "../../COMPONENTS/customButton/customButton";
 import COLOR from "../../config/COLOR";
+import { auth } from "../../firebase";
+// import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 function RegisterPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+
+  const handleRegister = async () => {
+    alert(email, password);
+    await createUserWithEmailAndPassword(auth, email, password);
+    
+  };
   return (
     <div
       className="registerpagebasecontainer"
@@ -34,7 +46,7 @@ function RegisterPage() {
                   <div className="registerpageinputbasecontainer">E-mail:</div>
                 </td>
                 <td>
-                  <input type="email" placeholder="Email" required />
+                  <input type="email" placeholder="Email" required onChange={(e) => setEmail(e.target.value)}/>
                 </td>
               </tr>
               <tr>
@@ -44,7 +56,7 @@ function RegisterPage() {
                   </div>
                 </td>
                 <td>
-                  <input type="password" placeholder="Password" required />
+                  <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
                 </td>
               </tr>
               <tr>
@@ -87,7 +99,7 @@ function RegisterPage() {
             backgroundColor={COLOR.basecolorsecond}
             color={COLOR.blackcolor}
             title={"register"}
-            onClick={() => alert("click done")}
+            onClick={handleRegister}
           />
         </div>
       </div>

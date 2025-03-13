@@ -1,25 +1,25 @@
+import React from "react";
+import Navbar from "../../COMPONENTS/Navbar/Navbar";
+import el from "../../assets/images/el2.png";
 import "./styles.css";
-function HomePage() {
+
+// import { CgProfile } from "react-icons/cg";
+function HomePage()
+ {
+  const UserRole = "both";
   return (
-    <div className="basecontainer">
-      <div className="basecontainer1">
-        <div className="imagebasecontainer1">
-          {
-            <img
-              src={require("../../Assets/images/onlinelearn.jpg")}
-              alt="image"
-            />
-          }
-        </div>
-        <div className="contentbasecontainer1"></div>
+    <div>
+      <Navbar UserRole={UserRole} />
+      {/* <h1> Welcome to Home Page</h1> */}
+      <div className="el">
+        <div className="courseContainer"></div>
+        <div
+          className="courseImageContainer"
+          style={{
+            backgroundImage: `url(${require("../../assets/images/el2.png")})`,
+          }}
+        ></div>
       </div>
-      <div className="basecontainer2">
-        <div className="contentbasecontainer2"></div>
-        <div className="imagebasecontainer2">
-          <img src={require("../../Assets/images/elearning.png")} />
-        </div>
-      </div>
-      <div className="basecontainer3"></div>
     </div>
   );
 }

@@ -66,6 +66,7 @@ const LoginPage = () => {
               <select value={role} onChange={(e) => setRole(e.target.value)}>
                 <option value="reader">Reader</option>
                 <option value="creator">Creator</option>
+                <option value="both">Both</option>
               </select>
             </div>
             <div className="extra-links">
@@ -81,7 +82,7 @@ const LoginPage = () => {
             </div>
             <div className="flex2">
               <h4>
-                Don't have an account? <a href="#"> Sign Up </a>
+                Don't have an account? <a href="register"> Sign Up </a>
               </h4>
             </div>
           </form>
