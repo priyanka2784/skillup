@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import loginimg from "../../assets/images/loginimg.png";
+import loginimg from "../../Assets/images/loginimg.png";
 import {
   faUser,
   faLock,
@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RiH4 } from "react-icons/ri";
-import CustomButton from "../../COMPONENTS/customButton/customButton";
+import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
 
 const LoginPage = () => {
