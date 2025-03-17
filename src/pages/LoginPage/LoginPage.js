@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { auth, database } from "../../firebase";
 import loginimg from "../../Assets/images/loginimg.png";
 import {
   faUser,
@@ -12,18 +13,59 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RiH4 } from "react-icons/ri";
 import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { Form, Navigate, useNavigate } from "react-router-dom";
+import { Database, ref, set } from "firebase/database";
 
-const LoginPage = () => {
+const LoginPage = (e) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("reader");
+  const [buttonText, setbuttonText] = useState("Login");
   const [showText, setShowText] = useState(false);
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Role:", role);
+  const navigate = useNavigate();
+  const saveUserDetail = (data) => {
+    set(ref(database, `contentcreator/${data.uid}`), data);
+    set(ref(database, `contentreader/${data.uid}`), data);
+    set(ref(database, `both/${data.uid}`), data);
+
+    navigate("/login");
   };
+  const handleLogin = async () => {
+    // e.preventDefault();
+    try {
+      if (email == "" || password == "") {
+        alert("fill it first");
+      } else {
+        setbuttonText("please wait!");
+        const response = await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        );
+        setbuttonText("Register");
+        if (response.user.uid) {
+          const userData = {
+            uid: response.user.uid,
+            email: response.user.email,
+          };
+          saveUserDetail(userData);
+        } else {
+          alert("failed to register");
+          setEmail("");
+          setPassword("");
+        }
+      }
+    } catch (err) {
+      setEmail("");
+      setPassword("");
+
+      alert(err);
+    }
+  };
+  //   console.log("Email:", email);
+  //   console.log("Password:", password);
+  //   console.log("Role:", role);
 
   return (
     <div className="login-container">
@@ -91,4 +133,5 @@ const LoginPage = () => {
     </div>
   );
 };
+
 export default LoginPage;
