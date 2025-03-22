@@ -4,11 +4,19 @@
     align-items: center;
     padding: 10px 10px;
     height: 10vh;
+    width: 100%;
     background: white;
     color: rgb(17, 4, 4);
     border: 4px solid #91c190;
     
 
+}
+.searchbar{
+    width:30%;
+    padding:8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
 }
 .logo{
     display: flex;
@@ -49,7 +57,7 @@
     cursor: pointer;
     object-fit: cover;
     display: block;
-    /* background-color: #0f9; */
+   background-color: var(--basecolor);
 }
 body{
    background-color: var(--basecolor) ;
@@ -59,6 +67,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     gap: 18px;
 
 }

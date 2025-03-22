@@ -14,12 +14,13 @@ function RegisterPage() {
   const [password, setPassword] = useState("");
   const [ConfirmPassword, setconfirmPassword] = useState("");
   const [buttonText, setbuttonText] = useState("");
+  const [role, setRole] = useState("");
   const navigate = useNavigate();
 
   const saveUserDetail = (data) => {
-    set(ref(database, `contentcreator/${data.uid}`), data);
-    set(ref(database, `contentreader/${data.uid}`), data);
-    set(ref(database, `both/${data.uid}`), data);
+    // set(ref(database, `contentcreator/${data.uid}`), data);
+    // set(ref(database, `contentreader/${data.uid}`), data);
+    set(ref(database, `users/${data.uid}`), data);
 
     navigate("/login");
   };
@@ -30,7 +31,8 @@ function RegisterPage() {
         Name == "" ||
         email == "" ||
         password == "" ||
-        ConfirmPassword == ""
+        ConfirmPassword == "" ||
+        role == ""
       ) {
         alert("fill it first");
       } else if (password !== ConfirmPassword) {
@@ -48,6 +50,7 @@ function RegisterPage() {
             uid: response.user.uid,
             email: response.user.email,
             Name: Name,
+            role: role,
           };
           saveUserDetail(userData);
         } else {
@@ -56,6 +59,7 @@ function RegisterPage() {
           setPassword("");
           setconfirmPassword("");
           setName("");
+          setRole("");
         }
       }
     } catch (err) {
@@ -63,6 +67,7 @@ function RegisterPage() {
       setEmail("");
       setPassword("");
       setconfirmPassword("");
+      setRole("");
       alert(err);
     }
   };
@@ -151,7 +156,7 @@ function RegisterPage() {
               </tr>
               <tr>
                 <td>
-                  <select>
+                  <select onChange={(e) => setRole(e.target.value)}>
                     <option value="">--up-to-u--</option>
                     <option value="Reader">Content Reader</option>
 
@@ -167,7 +172,7 @@ function RegisterPage() {
           <CustomButton
             backgroundColor={COLOR.basecolorsecond}
             color={COLOR.blackcolor}
-            title={buttonText}
+            title={"Register"}
             onClick={handleRegister}
           />
         </div>
