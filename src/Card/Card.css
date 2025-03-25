@@ -1,0 +1,54 @@
+[class^="Card"]{
+/* .Card{ */
+background: #f0dde7 ;    
+padding: 50px ;
+border-radius: 10px;
+text-align: center ;
+/* display: inline-block; */
+
+
+box-shadow: 4px 4px 10px rgba(255,255,255,0.5) ;
+
+width: 95% ;
+height: 40vh;
+
+}
+
+.Card h2{
+    color:black;
+
+}
+ div .Card p {
+    color: #555 !important;
+    font-size: medium;
+}
+.cardButton{
+    width: 25%;
+    background-color :#000;;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 7vh;
+
+
+    }
+     .cardButton :hover{
+        color: #0f9;
+     }
+     .card-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+     }
+     .cardlogo{
+        height: 7vh;
+        margin-left: 10px;
+     }
+    
+
+
+

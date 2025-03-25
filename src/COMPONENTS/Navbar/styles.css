@@ -2,11 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px 20px;
+    width: 100%;
     height: 10vh;
     background: white;
     color: rgb(17, 4, 4);
-    border: 4px solid #91c190;
+    border: 2px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 1000; */
     
 
 }
@@ -52,27 +57,25 @@
     /* background-color: #0f9; */
 }
 body{
-   background-color: var(--basecolor) ;
+   background-color: white ;
+   color: black;
 
 }
 .Content{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 33px;
 
 }
 .Content a{
-    /* display: flex; */
     color: #000000;
     text-decoration: none;
-    /* gap: 20px; */
     font-weight: bold;
     font-size: 18px;
-    /* justify-content: center;
-    align-items: center; */
     transition: color 0.3s ease;
 }
 .Content a:hover{
-    color: #91c190
+    color: #0f9
+    
 }

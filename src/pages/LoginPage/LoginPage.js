@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import loginimg from "../../assets/images/loginimg.png";
+import loginimg from "../../Assets/images/loginimg.png";
 import {
   faUser,
   faLock,
@@ -12,17 +12,38 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RiH4 } from "react-icons/ri";
 import CustomButton from "../../COMPONENTS/customButton/customButton";
 import COLOR from "../../config/COLOR";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("reader");
+  const navigate = useNavigate();
   const [showText, setShowText] = useState(false);
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Role:", role);
+    if (!email || !password) {
+      alert("Please enter email and password");
+      return;
+    }
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log("User Logged In:", userCredential.user);
+      alert("Login Successful");
+      navigate("/dashboard");
+    } catch (error) {
+      alert("Login failed:" + error.message);
+    }
+
+    // console.log("Email:", email);
+    // console.log("Password:", password);
+    // console.log("Role:", role);
   };
 
   return (
@@ -77,7 +98,8 @@ const LoginPage = () => {
               <CustomButton
                 title="Login"
                 onClick={handleLogin}
-                backgroundColor={COLOR.basecolor}
+                backgroundColor="#0f9"
+                color="#000"
               />
             </div>
             <div className="flex2">
@@ -90,5 +112,5 @@ const LoginPage = () => {
       </div>
     </div>
   );
-};
+}
 export default LoginPage;

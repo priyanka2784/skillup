@@ -1,82 +1,3 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.headingcontainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   background: linear-gradient(to top,var(--basecolor),var(--bordercolor),var(--basecolorsecond),var(--basecolor)); 
-}
-.loginbasecontainer{
-    display: flex;
-    align-items:center;
-    height:100vh;
-    justify-content: center;
-    background: linear-gradient(to right,var(--basecolor), var(--bordercolor) ,var(--secondarycolor),var(--basecolor));
-    flex-direction: row;
-}
-.usernamecontainer{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    padding:50px;
-    
-    background-color: var(--basecolorsecond);
-    box-shadow: 0px 0px 10px var(--basecolorsecond);
-    border-radius: 20px;
-    border:1px var(--bordercolor);
-}
-.usernamecontainer input{
-    padding:10px;
-    border-radius: 10px;
-
-}
-.buttoncontainer  button{
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5%;
-    background-color:var(--blackcolor);
-    color:var(--basecolorsecond)
-}
-button:hover{
-    background-color: var(--basecolor);
-    color:var(--bordercolor)
-}
-.ImageContainer{
-    
-    display: flex;
-    flex-direction:row; 
-    align-items: center;
-    margin:10%;
-    padding: 40px;
-    gap: 10px;
-    border-bottom: 10px;
-    background-color: var(--basecolorsecond);
-    box-shadow: 0px 0px 10px var(--basecolorsecond);
-    border: 1px var(--bordercolor);
-}
-@media(max-width:1080px){
-    .mainbaseconatiner{
-display:flex;
-flex-direction: column;
-    
-    }
-}
-@media(max-width:720px){
-    .mainbaseconatiner{
-display: flex;
-flex-direction: column;
-
-gap:10px;
-   }
-}
-@media(max-width:480px){
-    .ImageContainer{
-        display: none;}
-} */
 .login-container{
     width: 100%;
     height: 100vh;
@@ -84,11 +5,13 @@ gap:10px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: var(--basecolor);
-    
+    /* background-color: var(--basecolor); */
+    /* background-color: transparent; */
+    background-image: linear-gradient(to right, #363946,#A3BBAD,#363946);
 }
 .login-box{
-    background-color: white;
+    background-color: transparent;
+    border: 2px solid white;
     padding: 30px;
     border: radius 12px;
     box-shadow: 0 4px 10px rgba(0,0,0.1);
@@ -132,7 +55,7 @@ input,select{
 button{
     width: 100%;
     padding: 12px;
-    background-color: #E67E22;
+    background-color: #d87117;
     color: white;
     border: none;
     border-radius: 8px;
@@ -180,6 +103,6 @@ margin-right: 20px;
     padding: 12px;
 }
 .btn title :hover {
-     background-color: #e9fd64;
+     background-color: #fd9533d2;
 
 }
