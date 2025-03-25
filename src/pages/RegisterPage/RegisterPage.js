@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { auth, database } from "../../firebase";
-import ASSETS from "../../Assets";
+// import ASSETS from "../../Assets";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
@@ -15,6 +15,7 @@ function RegisterPage() {
   const [ConfirmPassword, setconfirmPassword] = useState("");
   const [buttonText, setbuttonText] = useState("");
   const [role, setRole] = useState("");
+  const [address, setAddress] = useState("");
   const navigate = useNavigate();
 
   const saveUserDetail = (data) => {
@@ -32,6 +33,7 @@ function RegisterPage() {
         email == "" ||
         password == "" ||
         ConfirmPassword == "" ||
+        address == "" ||
         role == ""
       ) {
         alert("fill it first");
@@ -50,6 +52,7 @@ function RegisterPage() {
             uid: response.user.uid,
             email: response.user.email,
             Name: Name,
+            address: address,
             role: role,
           };
           saveUserDetail(userData);
@@ -59,6 +62,7 @@ function RegisterPage() {
           setPassword("");
           setconfirmPassword("");
           setName("");
+          setAddress("");
           setRole("");
         }
       }
@@ -67,6 +71,7 @@ function RegisterPage() {
       setEmail("");
       setPassword("");
       setconfirmPassword("");
+      setAddress("");
       setRole("");
       alert(err);
     }
@@ -74,7 +79,7 @@ function RegisterPage() {
   return (
     <div
       className="registerpagebasecontainer"
-      style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
+      // style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
     >
       {/* <h1>Skill Up🎚️</h1> */}
       <div className=""></div>
@@ -143,6 +148,20 @@ function RegisterPage() {
                     placeholder="Confirm Password"
                     value={ConfirmPassword}
                     onChange={(e) => setconfirmPassword(e.target.value)}
+                    required
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div className="registerpageinputbasecontainer">Address:</div>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    placeholder="Address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
                     required
                   />
                 </td>

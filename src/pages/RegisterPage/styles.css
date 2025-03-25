@@ -12,7 +12,7 @@
     gap:20px;
     padding:5px;
     position: relative;
-    background-size: cover;
+    /* background-size: cover; */
     top: 0%;
     left:0%;
     right:0%;
@@ -20,7 +20,7 @@
     border:1px var(--bordercolor);
     height:100vh;
     width:100%;
-    background-color: var(--basecolor);
+    background: linear-gradient(to right, var(--bgcolor),var(--bgcolor2),var(--bgcolor));
     backdrop-filter: blur(10px);
 
 }
@@ -43,12 +43,18 @@
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    background-color: #FFF;
+    background-color: transparent;
     box-shadow: 0px 0px 10px var(--basecolorsecond) ;
     border-radius: 20px;
+    border: 2PX solid var(--bordercolor);
    
     
 }
+.registerpagecontentbasecontainer input{
+    background-color: var(--basecolorsecond);
+    color: var(--blackcolor);
+}
+
 
 .registerheading{
     align-items: center;
@@ -56,13 +62,16 @@
 
 }
 .registerpageinputbasecontainer{
-    /* height:30%;
-    width:30%; */
+ 
     border-radius: 20px;
-
+background-color: transparent;
     padding:15px;
     font-size: larger;
 
+}
+
+.registerpageformbasecontainer{
+    background-color: transparent;
 }
 .registerpageformbasecontainer input{
     padding:5px;

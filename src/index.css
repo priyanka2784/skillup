@@ -1,7 +1,9 @@
 :root{
-  --basecolor:#0a0a23;;
-  --basecolordim:hsla(118, 28%, 56%, 0.767);
+  --basecolor:#0a0a23;
+  --basecolordim:#303035;
   --basecolorsecond:#FEFEFF;
+  --bgcolor:#363946;
+  --bgcolor2:#A3BBAD;
   --secondarycolor:rgb(139, 134, 134);
   --blackcolor:#000000;
   --bordercolor:#dadada;
