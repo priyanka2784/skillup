@@ -11,6 +11,7 @@ import "./styles.css";
 import { FaSearch } from "react-icons/fa";
 import Card from "../../Card/Card";
 import img from "../../Assets/images/homeimg.png";
+import { Outlet } from "react-router-dom";
 
 // import { CgProfile } from "react-icons/cg";
 function HomePage() {

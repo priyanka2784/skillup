@@ -5,6 +5,7 @@
     padding: 10px 20px;
     width: 100%;
     height: 10vh;
+    width: 100%;
     background: white;
     color: rgb(17, 4, 4);
     border: 2px solid black;
@@ -54,7 +55,7 @@
     cursor: pointer;
     object-fit: cover;
     display: block;
-    /* background-color: #0f9; */
+   background-color: var(--basecolor);
 }
 body{
    background-color: white ;

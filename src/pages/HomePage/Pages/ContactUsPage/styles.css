@@ -1,0 +1,103 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.contactusbasecontainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex:1;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color:var(--basecolorsecond);
+}
+.contactRightContainer{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:10px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
+    color: var(--basecolor);
+    background-color: var(--basecolorsecond);
+}
+.ContactLeftContainer h1{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contactusInputContainer{
+    
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border:1px solid var(--bordercolor);
+    width:50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ContactLeftContainer{
+    height:87vh;
+    width:100%;
+    flex: 1;
+    box-shadow: 10px;
+    gap: 5px;
+    border:10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.contactEmailContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color:var(--basecolor);
+    color:var(--basecolorsecond);
+    padding: 20px;
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
+
+}
+.contactPhoneContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--basecolor);
+    color:var(--basecolorsecond);
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
+
+}
+.contactMotiveContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--basecolor);
+    color:var(--basecolorsecond);
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
+
+}
+.contactOurAddress{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--basecolor);
+    color:var(--basecolorsecond);
+    box-shadow: 0px 0px 10px var(--basecolorsecond) ;
+    border-radius: 20px;
+
+}
