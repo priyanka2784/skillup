@@ -5,11 +5,11 @@ function LandingPage() {
   const [userRole, setUserRole] = useState("both");
 
   return (
-    <div>
-      <div>
+    <div className="landingPageBaseContainer">
+      <div className="landingPageNavbarContainer">
         <Navbar UserRole={userRole} />
       </div>
-      <div>
+      <div className="landingPageContentContainer">
         <Outlet />
       </div>
     </div>

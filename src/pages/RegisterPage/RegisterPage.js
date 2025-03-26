@@ -3,7 +3,7 @@ import "./styles.css";
 import { auth, database } from "../../firebase";
 // import ASSETS from "../../Assets";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import CustomButton from "../../COMPONENTS/CustomButton/customButton";
+import CustomButton from "../../COMPONENTS/customButton/customButton";
 import COLOR from "../../config/COLOR";
 import { Form, Navigate, useNavigate } from "react-router-dom";
 import { Database, ref, set } from "firebase/database";

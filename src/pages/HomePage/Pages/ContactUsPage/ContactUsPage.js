@@ -1,6 +1,6 @@
 import react, { useState } from "react";
 import "./styles.css";
-import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
+import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import COLOR from "../../../../config/COLOR";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
