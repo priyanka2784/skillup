@@ -47,12 +47,15 @@ export const CourseCreatorModal = ({ closeModal }) => {
         />
 
         <label>Content: </label>
-        <ReactQuill value={content} onChange={setContent} />
-
-        <button onClick={handleSave}>Save Course</button>
-        <button onClick={closeModal} className="close-btn">
-          Cancel
-        </button>
+        <div className="modal-body">
+          <ReactQuill value={content} onChange={setContent} />
+        </div>
+        <div className="modal-footer">
+          <button onClick={handleSave}>Save Course</button>
+          <button onClick={closeModal} className="close-btn">
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   );

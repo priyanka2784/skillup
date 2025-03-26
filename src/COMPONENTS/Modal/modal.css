@@ -13,13 +13,23 @@
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 50%;
     text-align: center;
+    max-height: 80vh;
+}
+.modal-body{
+    flex: 1;
+    overflow-y: auto;
+    padding:10px;
 }
 input,textarea{
     width: 100%;
     /* margin-bottom: 10px; */
     padding: 5px;
+    resize: vertical;
 
 }
 button{
@@ -34,4 +44,11 @@ button{
 }
 .ql-container{
     height: 200px;
+}
+.modal-footer{
+    position: sticky;
+    bottom:0;
+    background: white;
+    padding:10px;
+    text-align: center;
 }
