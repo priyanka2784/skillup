@@ -1,24 +1,22 @@
 import React from "react";
-import Navbar from "../../COMPONENTS/Navbar/Navbar";
+import Navbar from "../../../../COMPONENTS/Navbar/Navbar";
 // import el from "../../Assets/images/el2.png";
-import logo1 from "../../Assets/images/logo1.png";
-import logo2 from "../../Assets/images/logo2.png";
-import logo3 from "../../Assets/images/logo3.png";
-import logo4 from "../../Assets/images/logo4.png";
-import logo5 from "../../Assets/images/logo5.png";
-import logo6 from "../../Assets/images/logo6.png";
+import logo1 from "../../../../Assets/images/logo1.png";
+import logo2 from "../../../../Assets/images/logo2.png";
+import logo3 from "../../../../Assets/images/logo3.png";
+import logo4 from "../../../../Assets/images/logo4.png";
+import logo5 from "../../../../Assets/images/logo5.png";
+import logo6 from "../../../../Assets/images/logo6.png";
 import "./styles.css";
 import { FaSearch } from "react-icons/fa";
-import Card from "../../Card/Card";
-import img from "../../Assets/images/homeimg.png";
-import { Outlet } from "react-router-dom";
+import Card from "../../../../Card/Card";
+import img from "../../../../Assets/images/homeimg.png";
 
 // import { CgProfile } from "react-icons/cg";
 function HomePage() {
   const UserRole = "both";
   return (
     <div className="homePage">
-      <Navbar UserRole={UserRole} />
       <h1 className="title"> Empower Your Learning Journey </h1>
       <p className="subtitle">
         Your gateway to mastering technology and beyond
@@ -94,6 +92,7 @@ function HomePage() {
           imgsrc={logo6}
         />
       </div>
+      <outlet />
     </div>
     // </div>
   );

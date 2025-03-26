@@ -16,12 +16,30 @@
     
 
 }
+.Navbarlinkcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    font-weight: bolder;
+    gap:30px;
+    font-size: small;
+}
+.Navbarlinkcontainer :hover{
+    color:#0f9;
+    transform:translateX(5px);
+    transition: 2s ease-in-out;
+}
 .logo{
     display: flex;
     font-size: 20px;
     font-weight: bold;
     align-items: center;
-
+}
+.logo :hover{
+    transform: rotate(360deg);
+    transition:  transform 2s ease-in-out;
 }
 .logo img{
     height: 10vh;
@@ -55,7 +73,7 @@
     cursor: pointer;
     object-fit: cover;
     display: block;
-   background-color: var(--basecolor);
+   background-color: var(--basecolorsecond);
 }
 body{
    background-color: white ;
