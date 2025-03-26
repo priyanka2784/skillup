@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "./styles.css";
 import logo from "../../Assets/images/skillup.png";
-// import profile from "../../assets/images/profileicon.png";
+// import { CgProfile } from "react-icons/cg";
 import { CgProfile } from "react-icons/cg";
+
 import CourseCreatorModal from "../Modal/CourseCreatorModal";
 import { useNavigate } from "react-router-dom";
 const Navbar = ({ UserRole }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
   const navigate = useNavigate();
   const links = [
     { title: "Home", path: "/home" },
@@ -24,13 +21,7 @@ const Navbar = ({ UserRole }) => {
       <div className="logo">
         <img src={logo} alt="MY logo" />
       </div>
-      <input
-        type="text"
-        placeholder="search...."
-        value={searchTerm}
-        onChange={handleSearchChange}
-        style={StyleSheet.searchInput}
-      />
+
       <div className="Navbarlinkcontainer">
         {links.map((item) => {
           return (
@@ -52,11 +43,18 @@ const Navbar = ({ UserRole }) => {
           </button>
         )}
         {/* // <img src={CgProfile} className="profile-icon" /> */}
-        <CgProfile
+        {/* <CgProfile
           size={40}
           className="profile-icon"
           onClick={() => alert("Profile Page")}
+        /> */}
+
+        <CgProfile
+          size={40}
+          className="profile-icon"
+          onClick={() => alert("profile page")}
         />
+
         {showModal && (
           <CourseCreatorModal closeModal={() => setShowModal(false)} />
         )}
