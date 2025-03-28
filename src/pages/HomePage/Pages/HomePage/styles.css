@@ -68,3 +68,12 @@ p{
  .h-img{
     padding: 50px;
  }
+.view{
+   display: flex;
+   height: auto;
+   justify-content:center;
+   align-items: center;
+   margin-bottom: 20px;
+   font-size: larger;
+ 
+}

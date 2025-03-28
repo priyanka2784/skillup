@@ -52,7 +52,7 @@ const Navbar = ({ UserRole }) => {
         <CgProfile
           size={40}
           className="profile-icon"
-          onClick={() => alert("profile page")}
+          onClick={() => navigate("/profilePage")}
         />
 
         {showModal && (

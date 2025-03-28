@@ -11,10 +11,19 @@ import "./styles.css";
 import { FaSearch } from "react-icons/fa";
 import Card from "../../../../Card/Card";
 import img from "../../../../Assets/images/homeimg.png";
+import CustomButton from "../../../../COMPONENTS/customButton/customButton";
+import { useNavigate } from "react-router-dom";
+import "./styles.css";
+import ImageSlider from "../../../../COMPONENTS/ImageSlider";
 
 // import { CgProfile } from "react-icons/cg";
-function HomePage() {
-  const UserRole = "both";
+const HomePage = () => {
+  const navigate = useNavigate();
+  const handleView = () => {
+    navigate("/courses");
+    const UserRole = "both";
+  };
+
   return (
     <div className="homePage">
       <h1 className="title"> Empower Your Learning Journey </h1>
@@ -72,7 +81,7 @@ function HomePage() {
           title="React JS"
           description="Language to build dynamic and interactive user interfaces"
           buttonText="Learn React"
-          bgcolor="#f0f0d7"
+          bgcolor="#ffffC5"
           imgsrc={logo4}
         />
         <Card
@@ -80,7 +89,7 @@ function HomePage() {
           title="Python"
           description="A Programming Language"
           buttonText="Learn Python"
-          bgcolor="#f0f0de"
+          bgcolor="#ffff"
           imgsrc={logo5}
         />
         <Card
@@ -92,9 +101,19 @@ function HomePage() {
           imgsrc={logo6}
         />
       </div>
+      <div className="view">
+        <CustomButton
+          title="View all Courses"
+          onClick={handleView}
+          backgroundColor="#0f9"
+          color="#000"
+        />
+      </div>
+      <div>
+        <ImageSlider />
+      </div>
       <outlet />
     </div>
-    // </div>
   );
-}
+};
 export default HomePage;

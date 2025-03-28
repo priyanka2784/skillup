@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import RegisterPage from "./pages/RegisterPage/RegisterPage.js";
@@ -7,8 +8,10 @@ import LandingPage from "./pages/HomePage/LandingPage.js";
 import ContactUsPage from "./pages/HomePage/Pages/ContactUsPage/ContactUsPage.js";
 import AboutUsPage from "./pages/HomePage/Pages/AboutUsPage/AboutUsPage.js";
 import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
+import ProfilePage from "./pages/HomePage/Pages/profilePage.js";
 
 function App() {
+  const [userType, setUserType] = useState("reader");
   return (
     <BrowserRouter>
       <Routes>
@@ -16,6 +19,10 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route
+            path="/profilePage"
+            element={<ProfilePage userType={userType} />}
+          />
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />

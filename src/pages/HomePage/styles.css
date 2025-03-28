@@ -1,13 +1,14 @@
-.landingPageBaseContainer {
+ .landingPageBaseContainer {
     width: 100%;
     height: 100vh;
     display: flex;
 }
 
-.landingPageNavbarContainer {
+ /* .landingPageNavbarContainer {
 
-}
-
-.landingPageContentContainer {
+} */
+ */
+ .landingPageContentContainer  {
     flex: 1;
-}
+
+ }
