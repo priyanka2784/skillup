@@ -1,0 +1,9 @@
+
+.footerFavIcons img{
+    height:50px;
+    width: 50px;
+}
+.footerBaseClass{
+    background-color: var(--basecolorsecond);
+    color: var(--blackcolor);
+}

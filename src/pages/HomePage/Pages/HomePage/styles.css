@@ -68,3 +68,45 @@ p{
  .h-img{
     padding: 50px;
  }
+ @keyframes Myanimation{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity:  1;}
+ }
+ .title{
+   
+    animation: Myanimation 3s ease-in-out ;
+     }
+ @keyframes paragraph{
+    from{
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity:  1;}
+ }
+ .subtitle{
+    animation: paragraph 3s ease-in-out;
+ }
+ 
+ @keyframes move{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }
+    to{
+        transform: translateX(0%);
+        opacity:1;
+       
+    }
+}
+.h-img{
+    animation: move 2s ease-in-out;
+}
+ 

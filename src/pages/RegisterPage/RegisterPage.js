@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { auth, database } from "../../firebase";
-// import ASSETS from "../../Assets";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import CustomButton from "../../COMPONENTS/customButton/customButton";
+import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
 import { Form, Navigate, useNavigate } from "react-router-dom";
 import { Database, ref, set } from "firebase/database";
@@ -82,7 +81,7 @@ function RegisterPage() {
       // style={{ backgroundImage: `URL(${ASSETS.RegisterPagebackgroundimg})` }}
     >
       {/* <h1>Skill Up🎚️</h1> */}
-      <div className=""></div>
+
       <div className="registerpagecontentbasecontainer">
         <h1>Create Your Account📚</h1>
 

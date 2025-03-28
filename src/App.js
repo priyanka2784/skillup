@@ -7,6 +7,7 @@ import LandingPage from "./pages/HomePage/LandingPage.js";
 import ContactUsPage from "./pages/HomePage/Pages/ContactUsPage/ContactUsPage.js";
 import AboutUsPage from "./pages/HomePage/Pages/AboutUsPage/AboutUsPage.js";
 import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
+import Courses from "./pages/HomePage/Pages/Courses/Courses.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/courses" element={<Courses />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
