@@ -6,6 +6,7 @@ const COLOR = {
   basecolorsecond: "#F0F7F4",
   secondarycolor: "rgb(139, 134, 134)",
   blackcolor: "#000000",
+  buttoncolor: "#19cb63",
   bordercolor: "#dadada",
 };
 export default COLOR;
