@@ -1,0 +1,30 @@
+.sidebarContainer{
+    width: 250px;
+    background: #f0f0f0;
+    padding:10px;
+    border-right: 2px solid #ddd;
+
+}
+.topicList{
+    list-style-type: none;
+    padding: 0;
+}
+.topicList li{
+    padding: 8px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+
+}
+.topicList li:hover{
+    background-color: #4CAF50;
+    color:white;
+}
+
+.contentArea{
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+}

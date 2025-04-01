@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../../../COMPONENTS/Navbar/Navbar";
 // import el from "../../Assets/images/el2.png";
 import logo1 from "../../../../Assets/images/logo1.png";
@@ -13,16 +13,27 @@ import Card from "../../../../Card/Card";
 import img from "../../../../Assets/images/homeimg.png";
 import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import { useNavigate } from "react-router-dom";
-import "./styles.css";
 import ImageSlider from "../../../../COMPONENTS/ImageSlider";
+import Sidebar from "../../../../COMPONENTS/Sidebar";
+import courseData from "../../../../courseData";
 
 // import { CgProfile } from "react-icons/cg";
 const HomePage = () => {
+  const [selectedCourse, setSelectedCourse] = useState(null);
+  // const [topicsList, setTopicsList] = useState([]);
+
   const navigate = useNavigate();
+  const handleLearnClick = (course) => {
+    console.log("course Selected: ", course);
+    setSelectedCourse(course);
+    // setTopicsList(topics[language] || []);
+  };
+
   const handleView = () => {
     navigate("/courses");
-    const UserRole = "both";
   };
+
+  // };
 
   return (
     <div className="homePage">
@@ -56,51 +67,62 @@ const HomePage = () => {
           className="Card1"
           title="HTML"
           description="Language for structuring web pages"
-          buttonText="Learn HTML"
           bgcolor="#f0dde7"
           imgsrc={logo1}
+          buttonText="Learn HTML"
+          onClick={() => handleLearnClick("HTML")}
         />
         <Card
           className="Card2"
           title="CSS"
           description="Language to design web pages"
-          buttonText="Learn CSS"
           bgcolor="#ddeaf0"
           imgsrc={logo2}
+          buttonText="Learn CSS"
+          onClick={() => handleLearnClick("CSS")}
         />
         <Card
           className="Card3"
           title="JavaScript"
           description="A Programming Language"
-          buttonText="Learn JS"
           bgcolor="#d7f0e7"
           imgsrc={logo3}
+          buttonText="Learn JS"
+          onClick={() => handleLearnClick("JavaScript")}
         />
         <Card
           className="Card4"
           title="React JS"
           description="Language to build dynamic and interactive user interfaces"
-          buttonText="Learn React"
           bgcolor="#ffffC5"
           imgsrc={logo4}
+          buttonText="Learn React"
+          onClick={() => handleLearnClick("React JS")}
         />
         <Card
           className="Card5"
           title="Python"
           description="A Programming Language"
-          buttonText="Learn Python"
           bgcolor="#ffff"
           imgsrc={logo5}
+          buttonText="Learn Python"
+          onClick={() => handleLearnClick("Python")}
         />
         <Card
           className="Card6"
           title="C++"
           description="A Programming Language"
-          buttonText="Learn C++"
           bgcolor="#e7dff0"
           imgsrc={logo6}
+          buttonText="Learn C++"
+          onClick={() => handleLearnClick("C++")}
         />
       </div>
+      {/* <div className="sidebarContainer">
+        {selectedTopic && (
+          <Sidebar topic={selectedTopic} topicsList={topicsList} />
+        )}
+      </div> */}
       <div className="view">
         <CustomButton
           title="View all Courses"
@@ -112,7 +134,12 @@ const HomePage = () => {
       <div>
         <ImageSlider />
       </div>
-      <outlet />
+      {/* <Outlet /> */}
+      {selectedCourse ? (
+        <Sidebar topics={courseData[selectedCourse]} />
+      ) : (
+        <p>Please Select a Course</p>
+      )}
     </div>
   );
 };

@@ -7,11 +7,13 @@ const Card = ({
   buttonText,
   bgcolor,
   imgsrc,
+  // onClick,
 }) => {
   return (
     <div className={`Card ${className}`} style={{ backgroundColor: bgcolor }}>
       <div className="card-header">
         <h2>{title}</h2>
+        {/* <button onClick={onClick}> {buttonText}</button> */}
         <img src={imgsrc} alt={`${title} logo`} className="cardlogo" />
       </div>
 
