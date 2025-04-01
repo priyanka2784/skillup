@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import ImageSlider from "../../../../COMPONENTS/ImageSlider";
 import Sidebar from "../../../../COMPONENTS/Sidebar";
 import courseData from "../../../../courseData";
+import Footer from "../../../../COMPONENTS/Footer/Footer";
 
 // import { CgProfile } from "react-icons/cg";
 const HomePage = () => {
@@ -131,15 +132,16 @@ const HomePage = () => {
           color="#000"
         />
       </div>
+
       <div>
         <ImageSlider />
       </div>
       {/* <Outlet /> */}
-      {selectedCourse ? (
+      {/* {selectedCourse ? (
         <Sidebar topics={courseData[selectedCourse]} />
       ) : (
         <p>Please Select a Course</p>
-      )}
+      )} */}
     </div>
   );
 };

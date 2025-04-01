@@ -3,6 +3,7 @@ import { useState } from "react";
 import navbar from "../../../../COMPONENTS/Navbar/Navbar";
 import "./styles.css";
 import skillup from "../../../../Assets/images/skillup.png";
+import Footer from "../../../../COMPONENTS/Footer/Footer";
 import VideoPlayer from "../../../../COMPONENTS/VideoPlayer/VideoPlayer";
 function AboutUsPage() {
   return (

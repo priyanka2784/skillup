@@ -3,12 +3,7 @@
     height: 100vh;
     display: flex;
 }
-
- /* .landingPageNavbarContainer {
-
-} */
- */
- .landingPageContentContainer  {
+.landingPageContentContainer {
     flex: 1;
 
  }
