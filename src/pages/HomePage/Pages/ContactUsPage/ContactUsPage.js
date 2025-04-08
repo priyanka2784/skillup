@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
+import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import COLOR from "../../../../config/COLOR";
 import { database } from "../../../../../src/firebase";
 import { ref, push } from "firebase/database";
@@ -35,15 +35,30 @@ function ContactPage() {
   };
 
   return (
-    <div className="contact-page">
-      <div className="contact-header">
+    <div className="contactusbasecontainer">
+      <div className="ContactLeftContainer">
         <h1>Contact Us</h1>
-        <p>
-          Empower your learning journey with engaging courses, interactive
-          lessons, and expert guidance. Whether you're a beginner or an advanced
-          learner, we provide high-quality educational content tailored to your
-          needs.
-        </p>
+        <div className="contactEmailContainer">
+          <MdEmail />
+          <h1>Email</h1>
+          <p>skillup23@gmail.com</p>
+        </div>
+        <div className="contactPhoneContainer">
+          <IoCall />
+          <h1>Phone-No:</h1>
+          <p>7867566790</p>
+          <p>6756453488</p>
+        </div>
+        <div className="contactMotiveContainer">
+          <FaHandPointRight />
+          <h1>Motive:</h1>
+          <p>Enhance Your skills</p>
+        </div>
+        <div className="contactOurAddress">
+          <IoLocation />
+          <h1>Location:</h1>
+          <p>Gurdaspur</p>
+        </div>
       </div>
       <div className="contact-container">
         <div className="contact-form">

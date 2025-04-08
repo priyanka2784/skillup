@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RiH4 } from "react-icons/ri";
-import CustomButton from "../../COMPONENTS/CustomButton/customButton";
+import CustomButton from "../../COMPONENTS/customButton/customButton";
 import COLOR from "../../config/COLOR";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
@@ -36,7 +36,7 @@ function LoginPage() {
       );
       console.log("User Logged In:", userCredential.user);
       alert("Login Successful");
-      navigate("/dashboard");
+      navigate("/register");
     } catch (error) {
       alert("Login failed:" + error.message);
     }

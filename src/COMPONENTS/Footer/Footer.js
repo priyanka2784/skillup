@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Quick Links */}
 
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           <h3 className="footerFavIconLinksContainer">Stay Connected</h3>
           <div className="footerFavIcons">
             <img src={telegram} alt="logo" />
