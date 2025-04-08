@@ -15,8 +15,8 @@ import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import { useNavigate } from "react-router-dom";
 import ImageSlider from "../../../../COMPONENTS/ImageSlider";
 import Sidebar from "../../../../COMPONENTS/Sidebar";
-import courseData from "../../../../courseData";
 import Footer from "../../../../COMPONENTS/Footer/Footer";
+import htmlData from "../../../../Courses/htmlData";
 
 // import { CgProfile } from "react-icons/cg";
 const HomePage = () => {
@@ -25,7 +25,7 @@ const HomePage = () => {
 
   const navigate = useNavigate();
   const handleLearnClick = (course) => {
-    console.log("course Selected: ", course);
+    alert("course Selected: ", course);
     setSelectedCourse(course);
     // setTopicsList(topics[language] || []);
   };
@@ -71,7 +71,11 @@ const HomePage = () => {
           bgcolor="#f0dde7"
           imgsrc={logo1}
           buttonText="Learn HTML"
-          onClick={() => handleLearnClick("HTML")}
+          onClick={() =>
+            navigate("/course", {
+              state: htmlData,
+            })
+          }
         />
         <Card
           className="Card2"

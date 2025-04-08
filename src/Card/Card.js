@@ -7,7 +7,7 @@ const Card = ({
   buttonText,
   bgcolor,
   imgsrc,
-  // onClick,
+  onClick,
 }) => {
   return (
     <div className={`Card ${className}`} style={{ backgroundColor: bgcolor }}>
@@ -18,7 +18,9 @@ const Card = ({
       </div>
 
       <p>{description}</p>
-      <button className="cardButton">{buttonText}</button>
+      <button className="cardButton" onClick={onClick}>
+        {buttonText}
+      </button>
     </div>
   );
 };

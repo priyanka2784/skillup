@@ -9,8 +9,7 @@ import ContactUsPage from "./pages/HomePage/Pages/ContactUsPage/ContactUsPage.js
 import AboutUsPage from "./pages/HomePage/Pages/AboutUsPage/AboutUsPage.js";
 import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
 import ProfilePage from "./pages/HomePage/Pages/profilePage.js";
-import Courses from "./pages/HomePage/Pages/Courses/Courses.js";
-
+import CoursePage from "./pages/HomePage/Pages/CoursePage/CoursePage.js";
 function App() {
   const [userType, setUserType] = useState("reader");
   return (
@@ -24,7 +23,8 @@ function App() {
             path="/profilePage"
             element={<ProfilePage userType={userType} />}
           />
-          <Route path="/courses" element={<Courses />} />
+          {/* <Route path="/courses/: courseName" element={<CoursePage />} /> */}
+          <Route path="/course" element={<CoursePage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />

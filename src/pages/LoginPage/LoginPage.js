@@ -36,7 +36,7 @@ function LoginPage() {
       );
       console.log("User Logged In:", userCredential.user);
       alert("Login Successful");
-      navigate("/dashboard");
+      navigate("/register");
     } catch (error) {
       alert("Login failed:" + error.message);
     }

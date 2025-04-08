@@ -22,7 +22,7 @@ function RegisterPage() {
     // set(ref(database, `contentreader/${data.uid}`), data);
     set(ref(database, `users/${data.uid}`), data);
 
-    navigate("/login");
+    navigate("/home");
   };
 
   const handleRegister = async () => {

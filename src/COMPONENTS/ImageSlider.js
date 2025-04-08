@@ -17,7 +17,7 @@ const ImageSlider = () => {
     <Swiper
       // effect="slide"
       slidesPerView={3} //show 4 images in a row
-      spaceBetween={0}
+      spaceBetween={20}
       loop={true}
       autoplay={{ delay: 1500, disableOnInteraction: false }}
       speed={800}
@@ -26,29 +26,22 @@ const ImageSlider = () => {
       modules={[Autoplay]}
       centeredSlides={false}
       slidesPerGroup={3}
-
-      //   style={{ width: "80%", margin: "auto" }}
+      style={{ margin: "100px 100px" }}
     >
       {images.map((src, index) => (
         <SwiperSlide
           key={index}
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <img
-            src={src}
-            alt={`Slide ${index + 1}`}
-            style={{
-              width: "90%",
-              height: "auto",
-              // spaceBetween: 0,
-
-              borderRadius: "10px",
-              objectFit: "cover",
-              display: "block",
-              margin: "0 auto",
-            }}
-          />
-        </SwiperSlide>
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundImage: `url(${src})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            width: "90px",
+            height: "40vh",
+            borderRadius: "10px",
+          }}
+        ></SwiperSlide>
       ))}
     </Swiper>
   );

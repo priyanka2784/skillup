@@ -9,12 +9,18 @@ import { useNavigate } from "react-router-dom";
 const Navbar = ({ UserRole }) => {
   const [showModal, setShowModal] = useState(false);
 
+  const courses = ["html", "css", "javascript", "react", "python", "c++"];
+
   const navigate = useNavigate();
   const links = [
     { title: "Home", path: "/home" },
     { title: "AboutUs", path: "/about" },
     { title: "ContactUs", path: "/contact" },
-    { title: "Courses", path: "/courses" },
+    { title: "Courses", path: "/courses/: courseName" },
+    courses.map((course) => ({
+      title: course.toUpperCase(),
+      path: `/courses/${courses}`,
+    })),
   ];
 
   return (
@@ -24,17 +30,23 @@ const Navbar = ({ UserRole }) => {
       </div>
 
       <div className="Navbarlinkcontainer">
-        {links.map((item) => {
+        {links.map((item, index) => (
+          <p key={index} onClick={() => navigate(item.path)}>
+            {item.title}
+          </p>
+        ))}
+
+        {/* {links.map((item) => {
           return (
             <p
               onClick={() => {
                 navigate(item.path);
               }}
             >
-              {item.title}
-            </p>
-          );
-        })}
+              {item.title} 
+        //     </p> */}
+        {/* //   );
+        // })} */}
       </div>
 
       <div className="right-section">
