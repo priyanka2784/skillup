@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RiH4 } from "react-icons/ri";
-import CustomButton from "../../COMPONENTS/customButton/customButton";
+import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
