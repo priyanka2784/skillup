@@ -10,6 +10,7 @@ function LandingPage() {
       <div className="landingPageNavbarContainer">
         <Navbar UserRole={userRole} />
       </div>
+
       <div className="landingPageContentContainer">
         <Outlet />
       </div>
