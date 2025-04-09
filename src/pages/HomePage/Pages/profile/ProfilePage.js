@@ -27,7 +27,7 @@ const ProfilePage = () => {
   const handleLogout = () => {
     const auth = getAuth();
     signOut(auth).then(() => {
-      window.location.href = "/";
+      window.location.href = "/home";
     });
   };
 
