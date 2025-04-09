@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-import CustomButton from "../../../../COMPONENTS/customButton/customButton";
+import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../../../config/COLOR";
 import { database } from "../../../../../src/firebase";
 import { ref, push } from "firebase/database";
@@ -39,23 +39,23 @@ function ContactPage() {
       <div className="ContactLeftContainer">
         <h1>Contact Us</h1>
         <div className="contactEmailContainer">
-          <MdEmail />
+          {/* <MdEmail /> */}
           <h1>Email</h1>
           <p>skillup23@gmail.com</p>
         </div>
         <div className="contactPhoneContainer">
-          <IoCall />
+          {/* <IoCall /> */}
           <h1>Phone-No:</h1>
           <p>7867566790</p>
           <p>6756453488</p>
         </div>
         <div className="contactMotiveContainer">
-          <FaHandPointRight />
+          {/* <FaHandPointRight /> */}
           <h1>Motive:</h1>
           <p>Enhance Your skills</p>
         </div>
         <div className="contactOurAddress">
-          <IoLocation />
+          {/* <IoLocation /> */}
           <h1>Location:</h1>
           <p>Gurdaspur</p>
         </div>

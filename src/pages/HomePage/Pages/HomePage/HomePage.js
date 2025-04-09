@@ -12,12 +12,16 @@ import { FaSearch } from "react-icons/fa";
 import Card from "../../../../Card/Card";
 import img from "../../../../Assets/images/homeimg.png";
 // import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
-import CustomButton from "../../../../COMPONENTS/customButton/customButton";
+import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
 import { useNavigate } from "react-router-dom";
 import ImageSlider from "../../../../COMPONENTS/ImageSlider";
 import Sidebar from "../../../../COMPONENTS/Sidebar";
 import Footer from "../../../../COMPONENTS/Footer/Footer";
 import htmlData from "../../../../Courses/htmlData";
+import cssData from "../../../../Courses/cssData";
+import cppData from "../../../../Courses/cppData";
+import javaData from "../../../../Courses/javaData";
+import pythonData from "../../../../Courses/pythonData";
 
 // import { CgProfile } from "react-icons/cg";
 const HomePage = () => {
@@ -85,16 +89,24 @@ const HomePage = () => {
           bgcolor="#ddeaf0"
           imgsrc={logo2}
           buttonText="Learn CSS"
-          onClick={() => handleLearnClick("CSS")}
+          onClick={() =>
+            navigate("/course", {
+              state: cssData,
+            })
+          }
         />
         <Card
           className="Card3"
-          title="JavaScript"
+          title="Java"
           description="A Programming Language"
           bgcolor="#d7f0e7"
           imgsrc={logo3}
           buttonText="Learn JS"
-          onClick={() => handleLearnClick("JavaScript")}
+          onClick={() =>
+            navigate("/course", {
+              state: javaData,
+            })
+          }
         />
         <Card
           className="Card4"
@@ -112,16 +124,24 @@ const HomePage = () => {
           bgcolor="#ffff"
           imgsrc={logo5}
           buttonText="Learn Python"
-          onClick={() => handleLearnClick("Python")}
+          onClick={() =>
+            navigate("/course", {
+              state: pythonData,
+            })
+          }
         />
         <Card
           className="Card6"
-          title="C++"
+          title="Cpp"
           description="A Programming Language"
           bgcolor="#e7dff0"
           imgsrc={logo6}
           buttonText="Learn C++"
-          onClick={() => handleLearnClick("C++")}
+          onClick={() =>
+            navigate("/course", {
+              state: cppData,
+            })
+          }
         />
       </div>
       {/* <div className="sidebarContainer">
