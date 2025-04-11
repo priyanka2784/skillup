@@ -376,6 +376,534 @@ Two of the following HTML elements makes the text bold, which two?
 
 `,
     },
+    {
+      name: "HTML Comments",
+      content: `
+HTML comments are not displayed in the browser, but they can help document your HTML source code.
+
+HTML Comment Tag
+You can add comments to your HTML source by using the following syntax:
+
+<!-- Write your comments here -->
+Notice that there is an exclamation point (!) in the start tag, but not in the end tag.
+
+Note: Comments are not displayed by the browser, but they can help document your HTML source code.
+
+Add Comments
+With comments you can place notifications and reminders in your HTML code:
+
+Example
+<!-- This is a comment -->
+
+<p>This is a paragraph.</p>
+
+<!-- Remember to add more information here -->
+Hide Content
+Comments can be used to hide content.
+
+This can be helpful if you hide content temporarily:
+
+Example
+<p>This is a paragraph.</p>
+
+<!-- <p>This is another paragraph </p> -->
+
+<p>This is a paragraph too.</p>
+You can also hide more than one line. Everything between the <!-- and the --> will be hidden from the display.
+
+Example
+Hide a section of HTML code:
+
+<p>This is a paragraph.</p>
+<!--
+<p>Look at this cool image:</p>
+<img border="0" src="pic_trulli.jpg" alt="Trulli">
+-->
+<p>This is a paragraph too.</p>
+Comments are also great for debugging HTML, because you can comment out HTML lines of code, one at a time, to search for errors.
+
+ADVERTISEMENT
+
+Hide Inline Content
+Comments can be used to hide parts in the middle of the HTML code.
+
+Example
+Hide a part of a paragraph:
+
+<p>This <!-- great text --> is a paragraph.</p>
+Exercise
+?
+What is the correct syntax for adding a comment in HTML?
+
+
+<-- This is a comment -->
+<## This is a comment ##>
+<--> This is a comment </-->
+<!-- This is a comment -->
+
+
+`,
+    },
+    {
+      name: "HTML Tables ",
+      content: `HTML tables allow web developers to arrange data into rows and columns.
+
+Example
+Define an HTML Table
+A table in HTML consists of table cells inside rows and columns.
+
+Example
+A simple HTML table:
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+Table Cells
+Each table cell is defined by a <td> and a </td> tag.
+
+td stands for table data.
+
+Everything between <td> and </td> is the content of a table cell.
+
+Example
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+</table>
+Note: A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc.
+
+ADVERTISEMENT
+
+Table Rows
+Each table row starts with a <tr> and ends with a </tr> tag.
+
+tr stands for table row.
+
+Example
+<table>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.
+
+Note: There are times when a row can have less or more cells than another. You will learn about that in a later chapter.
+
+Table Headers
+Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag:
+
+th stands for table header.
+
+Example
+Let the first row be table header cells:
+
+<table>
+  <tr>
+    <th>Person 1</th>
+    <th>Person 2</th>
+    <th>Person 3</th>
+  </tr>
+  <tr>
+    <td>Emil</td>
+    <td>Tobias</td>
+    <td>Linus</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>14</td>
+    <td>10</td>
+  </tr>
+</table>
+By default, the text in <th> elements are bold and centered, but you can change that with CSS.
+
+Exercise
+?
+What is the correct tag name for a table-cell in HTML?
+
+
+<tc>
+<td>
+<tr>
+
+
+`,
+    },
+    {
+      name: "HTML Lists",
+      content: `HTML lists allow web developers to group a set of related items in lists.
+
+Example
+An unordered HTML list:
+
+Item
+Item
+Item
+Item
+An ordered HTML list:
+
+First item
+Second item
+Third item
+Fourth item
+Unordered HTML List
+An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+
+The list items will be marked with bullets (small black circles) by default:
+
+Example
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+Ordered HTML List
+An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+
+The list items will be marked with numbers by default:
+
+Example
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+ADVERTISEMENT
+
+HTML Description Lists
+HTML also supports description lists.
+
+A description list is a list of terms, with a description of each term.
+
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+
+Example
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+Exercise
+?
+What is the correct tag name for list items?
+
+
+<item>
+<list-item>
+<li>
+`,
+    },
+    {
+      name: "HTML class Attributes",
+      content: `
+The HTML class attribute is used to specify a class for an HTML element.
+
+Multiple HTML elements can share the same class.
+
+The class Attribute
+The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+
+In the following example we have three <div> elements with a class attribute with the value of "city". All of the three <div> elements will be styled equally according to the .city style definition in the head section:
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="city">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
+
+<div class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+</body>
+</html>
+In the following example we have two <span> elements with a class attribute with the value of "note". Both <span> elements will be styled equally according to the .note style definition in the head section:
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.note {
+  font-size: 120%;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h1>My <span class="note">Important</span> Heading</h1>
+<p>This is some <span class="note">important</span> text.</p>
+
+</body>
+</html>
+Tip: The class attribute can be used on any HTML element.
+
+Note: The class name is case sensitive!
+
+Tip: You can learn much more about CSS in our CSS Tutorial.
+
+
+The Syntax For Class
+To create a class; write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}:
+
+Example
+Create a class named "city":
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+</body>
+</html>
+Multiple Classes
+HTML elements can belong to more than one class.
+
+To define multiple classes, separate the class names with a space, e.g. <div class="city main">. The element will be styled according to all the classes specified.
+
+In the following example, the first <h2> element belongs to both the city class and also to the main class, and will get the CSS styles from both of the classes: 
+
+Example
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+Different Elements Can Share Same Class
+Different HTML elements can point to the same class name.
+
+In the following example, both <h2> and <p> point to the "city" class and will share the same style:
+
+Example
+<h2 class="city">Paris</h2>
+<p class="city">Paris is the capital of France</p>
+Use of the class Attribute in JavaScript
+The class name can also be used by JavaScript to perform certain tasks for specific elements.
+
+JavaScript can access elements with a specific class name with the getElementsByClassName() method:
+
+Example
+Click on a button to hide all elements with the class name "city":
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+Don't worry if you don't understand the code in the example above.
+
+You will learn more about JavaScript in our HTML JavaScript chapter, or you can study our JavaScript Tutorial.
+
+Chapter Summary
+The HTML class attribute specifies one or more class names for an element
+Classes are used by CSS and JavaScript to select and access specific elements
+The class attribute can be used on any HTML element
+The class name is case sensitive
+Different HTML elements can point to the same class name
+JavaScript can access elements with a specific class name with the getElementsByClassName() method
+Exercise
+?
+True or False. The class name is case sensitive
+
+
+True
+False
+
+`,
+    },
+    {
+      name: "HTML id Attribute",
+      content: `The HTML id attribute is used to specify a unique id for an HTML element.
+
+You cannot have more than one element with the same id in an HTML document.
+
+The id Attribute
+The id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document.
+
+The id attribute is used to point to a specific style declaration in a style sheet. It is also used by JavaScript to access and manipulate the element with the specific id.
+
+The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.
+
+In the following example we have an <h1> element that points to the id name "myHeader". This <h1> element will be styled according to the #myHeader style definition in the head section:
+
+Example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+Note: The id name is case sensitive!
+
+Note: The id name must contain at least one character, cannot start with a number, and must not contain whitespaces (spaces, tabs, etc.).
+
+Difference Between Class and ID
+A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page:
+
+Example
+<style>
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+
+<!-- An element with a unique id -->
+<h1 id="myHeader">My Cities</h1>
+
+<!-- Multiple elements with same class -->
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+Tip: You can learn much more about CSS in our CSS Tutorial.
+
+ADVERTISEMENT
+
+HTML Bookmarks with ID and Links
+HTML bookmarks are used to allow readers to jump to specific parts of a webpage.
+
+Bookmarks can be useful if your page is very long.
+
+To use a bookmark, you must first create it, and then add a link to it.
+
+Then, when the link is clicked, the page will scroll to the location with the bookmark.
+
+Example
+First, create a bookmark with the id attribute:
+
+<h2 id="C4">Chapter 4</h2>
+Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+
+Example
+<a href="#C4">Jump to Chapter 4</a>
+Or, add a link to the bookmark ("Jump to Chapter 4"), from another page:
+
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+Using the id Attribute in JavaScript
+The id attribute can also be used by JavaScript to perform some tasks for that specific element.
+
+JavaScript can access an element with a specific id with the getElementById() method:
+
+Example
+Use the id attribute to manipulate text with JavaScript:
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+</script>
+Tip: Study JavaScript in the HTML JavaScript chapter, or in our JavaScript Tutorial.
+
+Chapter Summary
+The id attribute is used to specify a unique id for an HTML element
+The value of the id attribute must be unique within the HTML document
+The id attribute is used by CSS and JavaScript to style/select a specific element
+The value of the id attribute is case sensitive
+The id attribute is also used to create HTML bookmarks
+JavaScript can access an element with a specific id with the getElementById() method
+Exercise
+?
+True or False. The id name is case sensitive
+
+
+True
+False
+
+
+`,
+    },
   ],
 };
 

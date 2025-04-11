@@ -34,12 +34,12 @@ const ProfilePage = () => {
   return (
     <div className="profile-page-wrapper">
       <div className="profile-container">
-        <h2>Profile Page</h2>
+        <h2>Your Profile</h2>
 
         {userData ? (
           <div>
             <p>
-              <strong>Name:</strong> {userData.name}
+              <strong>Name:</strong> {userData.Name}
             </p>
             <p>
               <strong>Email:</strong> {userData.email}

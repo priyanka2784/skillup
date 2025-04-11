@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Sidebar from "../../../../COMPONENTS/Sidebar";
+import "./CourseContent.css";
+import COLOR from "../../../../config/COLOR";
 
 function CoursePage() {
   const location = useLocation();
@@ -12,33 +14,48 @@ function CoursePage() {
   }, []);
 
   return (
-    <div style={{ display: "flex", marginTop: "70px" }}>
-      <div style={{ display: "flex" }}>
-        <Sidebar topics={data.topics} onSelectTopic={setSelectedTopic} />
-      </div>
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-        }}
-      >
+    <div className="course-page">
+      <Sidebar topics={data.topics} onSelectTopic={setSelectedTopic} />
+      <div className="course-content">
         {data ? (
           <>
-            <h1 className="">{data.title ?? ""}</h1>
-            <h3>{selectedTopic.name}</h3>
-            <pre>{selectedTopic.content}</pre>
-            {/* {selectedTopic.map((topic, index) => (
-              <div key={index}>
-                <h2>{topic.name}</h2>
-                <pre>{topic.content}</pre>
-              </div>
-            ))} */}
+            <h1 className="course-title">{data.title || ""}</h1>
+
+            {selectedTopic ? (
+              <>
+                <h2 className="topic-title">{selectedTopic.name}</h2>
+                <pre className="topic-content">
+                  {selectedTopic.content.split("\n").map((line, index) => {
+                    let className = "";
+                    if (line.trim().toLowerCase() === "example") {
+                      className = "example-label";
+                    } else if (
+                      line.trim().startsWith("<") ||
+                      line.trim().startsWith("</") ||
+                      line.includes("DOCTYPE")
+                    ) {
+                      className = "example-block";
+                    }
+
+                    return (
+                      <div key={index} className={className}>
+                        {line}
+                      </div>
+                    );
+                  })}
+                </pre>
+              </>
+            ) : (
+              data.topics.map((topic, index) => (
+                <div key={index}>
+                  <h2 className="topic-title">{topic.name}</h2>
+                  <pre className="topic-content">{topic.content}</pre>
+                </div>
+              ))
+            )}
           </>
         ) : (
-          <h1>Data not found</h1>
+          <p>No data found</p>
         )}
       </div>
     </div>
