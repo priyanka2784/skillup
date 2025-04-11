@@ -3,7 +3,7 @@ import "./styles.css";
 import logo from "../../Assets/images/skillup.png";
 // import { CgProfile } from "react-icons/cg";
 import { CgProfile } from "react-icons/cg";
-
+// import profilepage from "../../pages/HomePage/Pages/profile/ProfilePage";
 import CourseCreatorModal from "../Modal/CourseCreatorModal";
 import { useNavigate } from "react-router-dom";
 const Navbar = ({ UserRole }) => {

@@ -3,7 +3,7 @@ import Navbar from "../../../../COMPONENTS/Navbar/Navbar";
 // import el from "../../Assets/images/el2.png";
 import logo1 from "../../../../Assets/images/logo1.png";
 import logo2 from "../../../../Assets/images/logo2.png";
-import logo3 from "../../../../Assets/images/logo3.png";
+import java from "../../../../Assets/images/java.svg";
 import logo4 from "../../../../Assets/images/logo4.png";
 import logo5 from "../../../../Assets/images/logo5.png";
 import logo6 from "../../../../Assets/images/logo6.png";
@@ -22,6 +22,7 @@ import cssData from "../../../../Courses/cssData";
 import cppData from "../../../../Courses/cppData";
 import javaData from "../../../../Courses/javaData";
 import pythonData from "../../../../Courses/pythonData";
+import reactData from "../../../../Courses/reactData";
 
 // import { CgProfile } from "react-icons/cg";
 const HomePage = () => {
@@ -100,13 +101,15 @@ const HomePage = () => {
           title="Java"
           description="A Programming Language"
           bgcolor="#d7f0e7"
-          imgsrc={logo3}
-          buttonText="Learn JS"
-          onClick={() =>
+          imgsrc={java}
+          buttonText="Learn Java"
+          onClick={() => {
+            console.log(javaData);
+
             navigate("/course", {
               state: javaData,
-            })
-          }
+            });
+          }}
         />
         <Card
           className="Card4"
@@ -115,7 +118,11 @@ const HomePage = () => {
           bgcolor="#ffffC5"
           imgsrc={logo4}
           buttonText="Learn React"
-          onClick={() => handleLearnClick("React JS")}
+          onClick={() =>
+            navigate("/course", {
+              state: reactData,
+            })
+          }
         />
         <Card
           className="Card5"

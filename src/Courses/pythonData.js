@@ -1,6 +1,6 @@
 const pythonData = {
   title: "Python Courses",
-  topic: [
+  topics: [
     {
       name: "Python Introduction",
       content: `What is Python?

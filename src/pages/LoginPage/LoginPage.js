@@ -90,10 +90,7 @@ function LoginPage() {
                 <option value="both">Both</option>
               </select>
             </div>
-            <div className="extra-links">
-              <a href="#"> Forgot Password? </a>
-            </div>
-            {/* <button className="login-btn"> Login</button> */}
+
             <div className="btn">
               <CustomButton
                 title="Login"

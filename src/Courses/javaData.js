@@ -1,6 +1,6 @@
 const javaData = {
   title: "Java Courses",
-  topic: [
+  topics: [
     {
       name: "Java Introduction",
       content: `What is Java?
@@ -77,9 +77,9 @@ Don't worry too much about how System, out and println() works. Just know that y
 You should also note that each code statement must end with a semicolon (;).`,
     },
     {
-      name: "",
+      name: "Java Operators",
       content: `Java Operators
-Java Operators
+
 Operators are used to perform operations on variables and values.
 
 In the example below, we use the + operator to add together two values:
@@ -136,12 +136,12 @@ Operator	Example	  Same As
   -=	     x -= 3   x = x - 3	
   *=	     x *= 3   x = x * 3	
   /=	     x /= 3	  x = x / 3	
-%=	         x %= 3	  x = x % 3	
-&=	         x &= 3	  x = x & 3	
-|=         	 x |= 3	  x = x | 3	
-^=	         x ^= 3	  x = x ^ 3	
->>=	         x >>= 3  x = x >> 3	
-<<=	         x <<= 3  x = x << 3	
+ %=	       x %= 3	  x = x % 3	
+ &=	       x &= 3	  x = x & 3	
+ |=     	 x |= 3	  x = x | 3	
+ ^=	       x ^= 3	  x = x ^ 3	
+ >>=	     x >>= 3  x = x >> 3	
+ <<=	     x <<= 3  x = x << 3	
 Java Comparison Operators
 Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.
 

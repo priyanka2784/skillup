@@ -6,6 +6,7 @@ import CustomButton from "../../COMPONENTS/CustomButton/customButton";
 import COLOR from "../../config/COLOR";
 import { Form, Navigate, useNavigate } from "react-router-dom";
 import { Database, ref, set } from "firebase/database";
+import { MdJavascript } from "react-icons/md";
 
 function RegisterPage() {
   const [Name, setName] = useState("");
@@ -18,6 +19,12 @@ function RegisterPage() {
   const navigate = useNavigate();
 
   const saveUserDetail = (data) => {
+    data.courses = {
+      html: "not started",
+      css: "not started",
+      MdJavascript: "not started",
+    };
+
     // set(ref(database, `contentcreator/${data.uid}`), data);
     // set(ref(database, `contentreader/${data.uid}`), data);
     set(ref(database, `users/${data.uid}`), data);
@@ -193,6 +200,11 @@ function RegisterPage() {
             title={"Register"}
             onClick={handleRegister}
           />
+        </div>
+        <div className="flex2">
+          <h4>
+            Have an account? <a href="login"> Sign In </a>
+          </h4>
         </div>
       </div>
     </div>

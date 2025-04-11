@@ -1,6 +1,6 @@
 const cppData = {
   title: "C++ Course",
-  topic: [
+  topics: [
     {
       name: "C++ Introduction",
       content: `What is C++?
