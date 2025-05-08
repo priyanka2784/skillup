@@ -9,7 +9,8 @@ import ContactUsPage from "./pages/HomePage/Pages/ContactUsPage/ContactUsPage.js
 import AboutUsPage from "./pages/HomePage/Pages/AboutUsPage/AboutUsPage.js";
 import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
 import ProfilePage from "./pages/HomePage/Pages/profile/ProfilePage.js";
-
+import BooksPage from "./pages/HomePage/Pages/BooksPage/BooksPage.js";
+import CheckoutPage from "./pages/HomePage/Pages/CheckoutPage/CheckoutPage.js";
 import CoursePage from "./pages/HomePage/Pages/CoursePage/CoursePage.js";
 function App() {
   const [userType, setUserType] = useState("reader");
@@ -20,6 +21,8 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/product" element={<BooksPage />} />
+          <Route path="/Checkout" element={<CheckoutPage />} />
           <Route
             path="/profilePage"
             element={<ProfilePage userType={userType} />}
