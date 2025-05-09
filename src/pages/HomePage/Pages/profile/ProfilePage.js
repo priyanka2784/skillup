@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAuth, signOut } from "firebase/auth";
 import { getDatabase, ref, onValue } from "firebase/database";
+import profileImg from "../../../../Assets/images/profileimg.png";
 import "./profile.css";
 
 const ProfilePage = () => {
@@ -35,9 +36,12 @@ const ProfilePage = () => {
     <div className="profile-page-wrapper">
       <div className="profile-container">
         <h2>Your Profile</h2>
+        <div className="profile-image">
+          <img src={profileImg} alt="profile" />
+        </div>
 
         {userData ? (
-          <div>
+          <div className="profile-card">
             <p>
               <strong>Name:</strong> {userData.Name}
             </p>
@@ -49,7 +53,7 @@ const ProfilePage = () => {
             </p>
             {userData.courses && (
               <div className="course-progress">
-                <h3>Course Progress: </h3>
+                <h3> View Your Course Progress: </h3>
                 <ul>
                   {Object.entries(userData.courses).map(([course, status]) => (
                     <li key={course}>

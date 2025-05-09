@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
 import ProfilePage from "./pages/HomePage/Pages/profile/ProfilePage.js";
 
 import CoursePage from "./pages/HomePage/Pages/CoursePage/CoursePage.js";
+import AllCoursesPage from "./pages/HomePage/Pages/AllCoursesPage/AllCoursesPage";
 function App() {
   const [userType, setUserType] = useState("reader");
   return (
@@ -26,6 +27,7 @@ function App() {
           />
           {/* <Route path="/courses/: courseName" element={<CoursePage />} /> */}
           <Route path="/course" element={<CoursePage />} />
+          <Route path="/courses" element={<AllCoursesPage />} />
         </Route>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
