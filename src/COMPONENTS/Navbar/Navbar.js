@@ -16,9 +16,11 @@ const Navbar = ({ UserRole }) => {
     { title: "Home", path: "/home" },
     { title: "AboutUs", path: "/about" },
     { title: "ContactUs", path: "/contact" },
-    { title: "Products", path: "/product" },
-    { title: "Courses", path: "/courses/: courseName" },
+    { title: "Books", path: "/product" },
+    // { title: "Courses", path: "/courses/: courseName" },
     { title: "Quiz", path: "/Quiz" },
+    // { title: "Courses", path: "/courses/ :courseName" },
+
     courses.map((course) => ({
       title: course.toUpperCase(),
       path: `/courses/${courses}`,
