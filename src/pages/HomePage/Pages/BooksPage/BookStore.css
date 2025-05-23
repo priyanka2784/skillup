@@ -1,12 +1,15 @@
 /* BookStore.css */
 .bookstore {
-    padding: 30px;
-    padding-top: 100px; /* Pushes content below navbar */
+    padding: 0;
+    padding-top: 50px; /* Pushes content below navbar */
     text-align: center;
   text-align: center;
   
 }
-
+.bookstore h1{
+ padding-top: 0px;
+  padding-bottom: 40px;
+}
 .book-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 books per row */
