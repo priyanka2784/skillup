@@ -9,9 +9,11 @@ import ContactUsPage from "./pages/HomePage/Pages/ContactUsPage/ContactUsPage.js
 import AboutUsPage from "./pages/HomePage/Pages/AboutUsPage/AboutUsPage.js";
 import HomePage from "./pages/HomePage/Pages/HomePage/HomePage.js";
 import ProfilePage from "./pages/HomePage/Pages/profile/ProfilePage.js";
-
+import BooksPage from "./pages/HomePage/Pages/BooksPage/BooksPage.js";
+import CheckoutPage from "./pages/HomePage/Pages/CheckoutPage/CheckoutPage.js";
 import CoursePage from "./pages/HomePage/Pages/CoursePage/CoursePage.js";
 import AllCoursesPage from "./pages/HomePage/Pages/AllCoursesPage/AllCoursesPage";
+import QuizPage from "./pages/HomePage/Pages/QuizPage/QuizPage.js";
 function App() {
   const [userType, setUserType] = useState("reader");
   return (
@@ -21,6 +23,9 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/product" element={<BooksPage />} />
+          <Route path="/Checkout" element={<CheckoutPage />} />
+          <Route path="/Quiz" element={<QuizPage />} />
           <Route
             path="/profilePage"
             element={<ProfilePage userType={userType} />}

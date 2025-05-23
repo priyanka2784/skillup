@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-// import CustomButton from "../../../../COMPONENTS/CustomButton/customButton";
+
 import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import { push, ref } from "firebase/database";
 import { database } from "../../../../firebase";

@@ -157,6 +157,7 @@ import "./styles.css";
 import { FaSearch } from "react-icons/fa";
 import Card from "../../../../Card/Card";
 import img from "../../../../Assets/images/homeimg.png";
+// import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import CustomButton from "../../../../COMPONENTS/customButton/customButton";
 import { useNavigate } from "react-router-dom";
 import ImageSlider from "../../../../COMPONENTS/ImageSlider";

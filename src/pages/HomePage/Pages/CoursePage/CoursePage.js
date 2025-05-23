@@ -20,13 +20,18 @@ function CoursePage() {
       <Sidebar topics={data?.topics || []} onSelectTopic={setSelectedTopic} />
 
       <div className="course-content">
+        {/* <RotatingLines
+          strokeWidth="2"
+          width="50"
+          strokeColor={COLOR.basecolor}
+        /> */}
         {data ? (
           <>
             <h1 className="course-title">{data.title || ""}</h1>
 
             {selectedTopic && selectedTopic.content ? (
               <>
-                <h2 className="topic-title">{selectedTopic.name}</h2>
+                <h2 className="topic-title"> {selectedTopic.name}</h2>
                 <pre className="topic-content">
                   {selectedTopic.content.split("\n").map((line, index) => {
                     let className = "";

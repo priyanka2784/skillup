@@ -1,0 +1,75 @@
+/* BookStore.css */
+.bookstore {
+    padding: 30px;
+    padding-top: 30px; /* Pushes content below navbar */
+    text-align: center;
+  text-align: center;
+  
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 books per row */
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-image {
+  width: 100%;
+  height: 180px; /* increased height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  color:var(--blackcolor); /* Title color */
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.book-card p {
+  color:var(--blackcolor); /* Price color */
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.book-card button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.book-card .buy {
+  background: #28a745;
+}
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 books per row */
+  gap: 20px;
+  padding: 20px;
+}
+.book-card img {
+  width: 100%;
+  height: 220px;            /* Adjust this to desired height */
+  object-fit: cover;        /* Ensures image maintains aspect ratio and fills area */
+  border-bottom: 1px solid #ddd;
+}

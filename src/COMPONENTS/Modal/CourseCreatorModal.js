@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import "./modal.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { Database, ref, push } from "firebase/database";
+import { Database, getDatabase, ref, push } from "firebase/database";
 import { database } from "../../firebase";
 // import { Database } from "../../auth/firebase";
+const handleAddCourse = (title, description) => {
+  const db = getDatabase();
+  const newCourseRef = push(ref(db, "courses"));
+  newCourseRef.set({
+    title,
+    description,
+  });
+};
 
 export const CourseCreatorModal = ({ closeModal }) => {
   const [courseTitle, setCoursetitle] = useState("");

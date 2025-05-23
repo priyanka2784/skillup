@@ -5,7 +5,7 @@ import logo from "../../Assets/images/skillup.png";
 import { CgProfile } from "react-icons/cg";
 // import profilepage from "../../pages/HomePage/Pages/profile/ProfilePage";
 import CourseCreatorModal from "../Modal/CourseCreatorModal";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Navbar = ({ UserRole }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -16,6 +16,9 @@ const Navbar = ({ UserRole }) => {
     { title: "Home", path: "/home" },
     { title: "AboutUs", path: "/about" },
     { title: "ContactUs", path: "/contact" },
+    { title: "Books", path: "/product" },
+    // { title: "Courses", path: "/courses/: courseName" },
+    { title: "Quiz", path: "/Quiz" },
     // { title: "Courses", path: "/courses/ :courseName" },
 
     courses.map((course) => ({
@@ -23,6 +26,15 @@ const Navbar = ({ UserRole }) => {
       path: `/courses/${courses}`,
     })),
   ];
+
+  const Books = () => (
+    <nav className="navbar">
+      <h2>My Book Store</h2>
+      <div>
+        <Link to="/products">Products</Link>
+      </div>
+    </nav>
+  );
 
   return (
     <nav className="navbar">
